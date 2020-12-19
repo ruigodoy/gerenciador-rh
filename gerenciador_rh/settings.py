@@ -60,7 +60,11 @@ ROOT_URLCONF = 'gerenciador_rh.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
+<<<<<<< HEAD
         'DIRS': ['templates'],
+=======
+        'DIRS': ['templates', 'apps/core/templates'],
+>>>>>>> 9c9ea1061fa0b62b4203d85bdb7e0b97052cadd9
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
