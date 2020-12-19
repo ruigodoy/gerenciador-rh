@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+
+{% block main %}
+    Listagem dos Colaboradores <br>
+    {% for colaborador in object_list %}
+        <a href=" {% url 'atualizar_colaborador' colaborador.id %} ">
+            {{ colaborador }}
+        </a><br>
+    {% endfor %}
+{% endblock %}

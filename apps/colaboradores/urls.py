@@ -1,7 +1,8 @@
 from django.urls import path
 
-from apps.colaboradores.views import home
+from apps.colaboradores.views import ColaboradoresListar, ColaboradorEditar
 
 urlpatterns = [
-    path('', home),
+    path('', ColaboradoresListar.as_view(), name='listar_colaboradores'),
+    path('editar/<int:pk>/', ColaboradorEditar.as_view(), name='atualizar_colaborador'),
 ]
