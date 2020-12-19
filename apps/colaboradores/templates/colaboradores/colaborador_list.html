@@ -6,6 +6,10 @@
     {% for colaborador in object_list %}
         <a href=" {% url 'atualizar_colaborador' colaborador.id %} ">
             {{ colaborador }}
-        </a><br>
+        </a>
+        <a href="{% url 'deletar_colaborador' colaborador.id %}">
+            Excluir
+        </a>
+        <br>
     {% endfor %}
 {% endblock %}
