@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+
+{% block main %}
+    Listagem dos Colaboradores <br>
+    {% for departamento in object_list %}
+        <a href="{% url 'atualizar_departamento' departamento.id %}">
+            {{ departamento }}
+        </a>
+        <a href="{% url 'deletar_departamento' departamento.id %}">
+            Excluir
+        </a>
+        <br>
+    {% endfor %}
+
+    <a href="{% url 'criar_departamento' %}" class="btn btn-info"> Novo </a>
+{% endblock %}
